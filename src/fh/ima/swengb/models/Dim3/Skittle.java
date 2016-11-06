@@ -12,7 +12,7 @@ public class Skittle extends Dim3 {
 
     @Override
     public double calculateVolume() {
-        return (1/3)*sideA*sideA*sideB;
+        return (1.0/3.0)*sideA*sideA*sideB;
     }
 
     @Override

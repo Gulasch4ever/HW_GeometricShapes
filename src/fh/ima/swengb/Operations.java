@@ -2,11 +2,17 @@ package fh.ima.swengb;
 
 import fh.ima.swengb.models.Dim2.Angular.Parallelogram;
 import fh.ima.swengb.models.Dim2.Angular.Triangle;
+import fh.ima.swengb.models.Dim2.Dim2;
 import fh.ima.swengb.models.Dim2.circular.Circle;
 import fh.ima.swengb.models.Dim3.Cube;
+import fh.ima.swengb.models.Dim3.Dim3;
 import fh.ima.swengb.models.Dim3.Skittle;
 import fh.ima.swengb.models.Dim3.SquarePyramid;
-import sun.applet.Main;
+import fh.ima.swengb.models.Gulasch;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * Created by laszlobalo on 05.11.16.
@@ -16,44 +22,100 @@ public class Operations {
     public static void main(String[] args) {
 
 
-        Main main = new Main();
-        main.doit();
+        Operations operations = new Operations();
+        operations.doit();
 
     }
 
-    private void doit(){
+    private void doit() {
 
 
+
+
+        //dim2
+        List<Dim2> dim2List = new ArrayList<>();
+        fillList2dim(dim2List);
+        printList(dim2List);
+
+
+        //dim3
+        List<Dim3> dim3List = new ArrayList<>();
+        fillList3d(dim3List);
+        printList3d(dim3List);
+
+
+
+    }
+
+    private void printList(List<Dim2> dim2List) {
 
         System.out.println("---------------------2 dim---------------------");
 
-        Parallelogram p1 = new Parallelogram(3.0,2.0,1.414);
-        System.out.println(p1);
+        double sumArea = 0;
+        double sumPerimeter = 0;
 
-        Triangle t1 = new Triangle(3.0,4.0);
-        Triangle t2 = new Triangle(3.0,4.0);
-        System.out.println(t1.equals(t2));
-        System.out.println(t1);
+        for (Gulasch geometricShape : dim2List) {
+            System.out.println(geometricShape);
+        }
 
-        Circle c1 = new Circle(3.0);
-        Circle c2 = new Circle(3.0);
-        System.out.println(c1.equals(c2));
-        System.out.println(c1);
+        for (Dim2 geometricShape : dim2List) {
+            sumArea += geometricShape.calculateArea();
+        }
+
+        System.out.println("sum of all areas = "+sumArea);
+
+        for (Dim2 geometricShape : dim2List) {
+            sumPerimeter += geometricShape.calculatePerimeter();
+        }
+
+        System.out.println("sum of all perimeters = "+sumPerimeter);
+    }
+
+    private void fillList2dim(List<Dim2> dim2List) {
+
+        dim2List.add(new Parallelogram(3.0, 2.0, 1.414));
+        dim2List.add(new Parallelogram(3.0, 2.0, 1.414));
+        dim2List.add(new Triangle(3.0, 4.0));
+        dim2List.add(new Triangle(3.0, 5.0));
+        dim2List.add(new Circle(3.0));
+        dim2List.add(new Circle(4.0));
+    }
 
 
 
+
+
+    private void fillList3d(List<Dim3> dim3List) {
+
+
+        dim3List.add(new Cube(3.0));
+        dim3List.add(new Skittle(3.0,5.0));
+        dim3List.add(new SquarePyramid(3.0,3.0));
+    }
+
+    private void printList3d(List<Dim3> dim3List) {
 
         System.out.println("---------------------3 dim---------------------");
 
-        Cube cube1 = new Cube(3.0);
-        System.out.println(cube1);
+        double sumVolume = 0;
+        double sumSurfaceArea = 0;
 
-        Skittle skitte1 = new Skittle(3.0,5.0);
-        System.out.println(skitte1);
+        for (Dim3 geometricShape : dim3List) {
+            System.out.println(geometricShape);
+        }
 
-        SquarePyramid s1 = new SquarePyramid(3.0,3.0);
-        System.out.println(s1);
+        for (Dim3 geometricShape : dim3List) {
+            sumVolume += geometricShape.calculateVolume();
+        }
 
+        System.out.println("sum of all volumes = "+sumVolume);
+
+        for (Dim3 geometricShape : dim3List) {
+            sumSurfaceArea += geometricShape.calculateSurfaceArea();
+        }
+
+        System.out.println("sum of all surfaces = "+sumSurfaceArea);
 
     }
+
 }

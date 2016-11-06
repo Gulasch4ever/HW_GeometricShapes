@@ -9,6 +9,7 @@ public abstract class Circular extends Dim2 {
 
     protected double radius;
 
+
     public double getRadius() {
         return radius;
     }
