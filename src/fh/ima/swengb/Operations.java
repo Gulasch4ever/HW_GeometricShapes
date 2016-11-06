@@ -8,7 +8,7 @@ import fh.ima.swengb.models.Dim3.Cube;
 import fh.ima.swengb.models.Dim3.Dim3;
 import fh.ima.swengb.models.Dim3.Skittle;
 import fh.ima.swengb.models.Dim3.SquarePyramid;
-import fh.ima.swengb.models.Gulasch;
+import fh.ima.swengb.models.GeometricShapes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +54,7 @@ public class Operations {
         double sumArea = 0;
         double sumPerimeter = 0;
 
-        for (Gulasch geometricShape : dim2List) {
+        for (GeometricShapes geometricShape : dim2List) {
             System.out.println(geometricShape);
         }
 

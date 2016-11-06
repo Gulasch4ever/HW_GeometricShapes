@@ -1,11 +1,11 @@
 package fh.ima.swengb.models.Dim3;
 
-import fh.ima.swengb.models.Gulasch;
+import fh.ima.swengb.models.GeometricShapes;
 
 /**
  * Created by laszlobalo on 05.11.16.
  */
-public abstract class Dim3 extends Gulasch {
+public abstract class Dim3 extends GeometricShapes {
 
     protected double sideA;
     protected double sideB;
