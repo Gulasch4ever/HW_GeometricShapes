@@ -29,9 +29,6 @@ public class Operations {
 
     private void doit() {
 
-
-
-
         //dim2
         List<Dim2> dim2List = new ArrayList<>();
         fillList2dim(dim2List);
@@ -62,13 +59,13 @@ public class Operations {
             sumArea += geometricShape.calculateArea();
         }
 
-        System.out.println("sum of all areas = "+sumArea);
+        System.out.println(String.format("sum of all areas = %.2f", sumArea));
 
         for (Dim2 geometricShape : dim2List) {
             sumPerimeter += geometricShape.calculatePerimeter();
         }
 
-        System.out.println("sum of all perimeters = "+sumPerimeter);
+        System.out.println(String.format("sum of all perimeters = %.2f",sumPerimeter));
     }
 
     private void fillList2dim(List<Dim2> dim2List) {
@@ -106,7 +103,10 @@ public class Operations {
 
         for (Dim3 geometricShape : dim3List) {
             sumVolume += geometricShape.calculateVolume();
+
         }
+
+
 
         System.out.println("sum of all volumes = "+sumVolume);
 
