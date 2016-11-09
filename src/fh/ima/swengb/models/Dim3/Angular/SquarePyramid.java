@@ -1,9 +1,11 @@
-package fh.ima.swengb.models.Dim3;
+package fh.ima.swengb.models.Dim3.Angular;
+
+import fh.ima.swengb.models.Dim3.Dim3;
 
 /**
  * Created by laszlobalo on 05.11.16.
  */
-public class SquarePyramid extends Dim3 {
+public class SquarePyramid extends Angular3D {
 
     public SquarePyramid(double a, double h){
         this.sideA = a;

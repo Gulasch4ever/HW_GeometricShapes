@@ -1,11 +1,12 @@
-package fh.ima.swengb.models.Dim3;
+package fh.ima.swengb.models.Dim3.Circular;
+
 
 
 
 /**
  * Created by laszlobalo on 05.11.16.
  */
-public class Cube extends Dim3 {
+public class Cube extends Circular3D {
 
     public Cube(double a){
         this.sideA = a;

@@ -4,10 +4,10 @@ import fh.ima.swengb.models.Dim2.Angular.Parallelogram;
 import fh.ima.swengb.models.Dim2.Angular.Triangle;
 import fh.ima.swengb.models.Dim2.Dim2;
 import fh.ima.swengb.models.Dim2.circular.Circle;
-import fh.ima.swengb.models.Dim3.Cube;
+import fh.ima.swengb.models.Dim3.Circular.Cube;
 import fh.ima.swengb.models.Dim3.Dim3;
-import fh.ima.swengb.models.Dim3.Skittle;
-import fh.ima.swengb.models.Dim3.SquarePyramid;
+import fh.ima.swengb.models.Dim3.Circular.Skittle;
+import fh.ima.swengb.models.Dim3.Angular.SquarePyramid;
 import fh.ima.swengb.models.GeometricShapes;
 
 import java.util.ArrayList;

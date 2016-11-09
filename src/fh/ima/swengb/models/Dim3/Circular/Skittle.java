@@ -1,9 +1,11 @@
-package fh.ima.swengb.models.Dim3;
+package fh.ima.swengb.models.Dim3.Circular;
+
+
 
 /**
  * Created by laszlobalo on 05.11.16.
  */
-public class Skittle extends Dim3 {
+public class Skittle extends Circular3D {
 
     public Skittle(double r,double h){
         this.sideA = r;
