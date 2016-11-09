@@ -108,13 +108,13 @@ public class Operations {
 
 
 
-        System.out.println("sum of all volumes = "+sumVolume);
+        System.out.println(String.format("sum of all volumes = %.2f", sumVolume));
 
         for (Dim3 geometricShape : dim3List) {
             sumSurfaceArea += geometricShape.calculateSurfaceArea();
         }
 
-        System.out.println("sum of all surfaces = "+sumSurfaceArea);
+        System.out.println(String.format("sum of all surfaces = %.2f",sumSurfaceArea ));
 
     }
 

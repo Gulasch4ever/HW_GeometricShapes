@@ -7,6 +7,6 @@ import fh.ima.swengb.Gulasch;
  */
 public abstract class GeometricShapes extends Gulasch{
 
-    //everything inherits from Gulasch, so every geometric shape is gulasch
+    //everything inherits from Gulasch, so every geometric shape is Gulasch
 
 }
